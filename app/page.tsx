@@ -1,286 +1,359 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
       <nav>
         <div className="wrap nav-inner">
-          <a className="nav-name" href="#top">samuel.richard</a>
+          <a className="nav-name" href="#top">Samuel Richard</a>
           <div className="nav-links">
-            <a href="#work">Work</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#leadership">Leadership</a>
-            <a href="#contact">Contact</a>
+            <a href="#journey">Journey</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#how">How I work</a>
+            <a href="#about">About</a>
           </div>
+          <a className="nav-cta" href="mailto:samuelrichards1844@gmail.com">Email me</a>
         </div>
       </nav>
 
       <header className="hero wrap" id="top">
-        <p className="hero-eyebrow">Samuel Richard · Lagos, Nigeria · Affiliate &amp; Performance Marketing</p>
-        <h1>
-          I run the campaigns <span className="accent">and build the pipes.</span>
-        </h1>
-        <p className="hero-sub">
-          Performance marketer with 4 years across paid acquisition and affiliate
-          operations — Meta Ads, Taboola native, CPA/CPL economics — and the rare
-          ability to build and debug the tracking layer underneath: S2S postbacks,
-          RedTrack, Voluum, and network integrations across Everflow, CAKE, Affise
-          and TUNE. I&apos;ve even built a working affiliate platform from scratch.
-        </p>
-
-        {/* Signature element: a live postback, Samuel's actual specialty */}
-        <div className="postback" aria-label="Example server-to-server postback request">
-          <span className="dim">$</span> GET https://track.samuelr.dev/postback
-          <span className="org">?clickid=</span>{"{clickid}"}
-          <span className="org">&amp;payout=</span>{"{payout}"}
-          <span className="org">&amp;status=</span>approved
-          <br />
-          <span className="dim">← 200 OK</span>&nbsp;&nbsp;
-          <span className="grn">conversion recorded · attribution intact</span>
-          <span className="cursor" aria-hidden="true" />
-        </div>
-
-        <div className="hero-ctas">
-          <a className="btn primary" href="#work">See the proof</a>
-          <a className="btn ghost" href="mailto:samuelrichards1844@gmail.com">Email me</a>
+        <div className="hero-grid">
+          <div>
+            <p className="avail"><span className="dot" aria-hidden="true" />Open to affiliate, performance marketing &amp; ad-tech roles</p>
+            <h1>
+              I turn paid traffic into <em>profit</em> — and build the systems that prove it.
+            </h1>
+            <p className="hero-sub">
+              Performance marketing and business development professional in Lagos.
+              I scale CPA/CPL offers on Taboola and Meta, run the tracking stack
+              underneath them — postbacks, attribution, network integrations — and
+              when a tool doesn&apos;t exist, I build it myself.
+            </p>
+            <div className="hero-ctas">
+              <a className="btn dark" href="mailto:samuelrichards1844@gmail.com">Get in touch</a>
+              <a className="btn light" href="#journey">Read my journey</a>
+            </div>
+          </div>
+          <div className="portrait-frame">
+            <Image
+              src="/samuel.png"
+              alt="Samuel Richard"
+              width={800}
+              height={1030}
+              priority
+            />
+          </div>
         </div>
       </header>
 
-      <section id="work">
+      <div className="stats">
+        <div className="wrap stats-grid">
+          <div className="stat"><div className="n">$100k+</div><div className="l">Profit from scaled offers in six months</div></div>
+          <div className="stat"><div className="n">4 yrs</div><div className="l">Paid acquisition &amp; partner management</div></div>
+          <div className="stat"><div className="n">10+</div><div className="l">Tracking &amp; affiliate platforms mastered</div></div>
+          <div className="stat"><div className="n">3</div><div className="l">Products built, shipped &amp; monetized</div></div>
+        </div>
+      </div>
+
+      <section id="journey">
         <div className="wrap">
-          <div className="sec-head">
-            <h2>Proof of work</h2>
-            <span className="path">/case-studies · 3 entries · status: approved</span>
+          <p className="kicker">The journey</p>
+          <h2 className="sec-title">Five chapters, one throughline: own the result end to end.</h2>
+          <p className="sec-intro">
+            Most careers pick a lane — commercial or technical, media buying or
+            engineering. Mine kept refusing to. Every chapter below added a layer,
+            and together they explain what I bring into any professional setting.
+          </p>
+
+          <div className="journey">
+            <article className="chapter">
+              <div className="ch-num">01</div>
+              <div>
+                <h3>Learning operations at scale</h3>
+                <p className="ch-where">Jumia · Vendor Experience Agent (Account Manager) · 2022 — 2023</p>
+                <p>
+                  My first professional chapter was Africa&apos;s largest e-commerce
+                  platform, managing vendor relationships where every conversation
+                  touched payments, listings, or fulfillment. I learned how large
+                  organizations actually run: structured case management in
+                  Salesforce, cross-departmental escalation, and Excel reporting
+                  that management could act on.
+                </p>
+                <div className="ch-proof">
+                  <span className="proof">Salesforce CRM</span>
+                  <span className="proof">Vendor account management</span>
+                  <span className="proof">Operational reporting</span>
+                  <span className="proof">Cross-team escalation</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="chapter">
+              <div className="ch-num">02</div>
+              <div>
+                <h3>Scaling offers — and the six months that proved it</h3>
+                <p className="ch-where">Digital Concept · Business Development Manager · 2023 — present</p>
+                <p>
+                  At an affiliate network, I moved from supporting campaigns to
+                  reshaping how we scale them. I brought new approaches to running
+                  CPA/CPL offers on Taboola and Meta Ads — sharper creative and
+                  audience testing, landing pages rebuilt by hand, spend
+                  reallocated by segment-level data — generating over $100,000 in
+                  profit within a six-month span.
+                </p>
+                <p>
+                  The unusual part: I also run the attribution layer myself. S2S
+                  postbacks, direct linking, and subID architecture across
+                  RedTrack, Voluum and Skro, with network-side operations spanning
+                  CAKE, Impact, Affise, Everflow, TUNE and FlexOffers. When a
+                  conversion goes missing, I don&apos;t file a ticket — I read the
+                  postback log.
+                </p>
+                <div className="ch-proof">
+                  <span className="proof warm">$100k+ profit / 6 months</span>
+                  <span className="proof">Taboola &amp; Meta Ads</span>
+                  <span className="proof">S2S postbacks</span>
+                  <span className="proof">Deal negotiation (CPA/RevShare)</span>
+                  <span className="proof">International partner onboarding</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="chapter">
+              <div className="ch-num">03</div>
+              <div>
+                <h3>Owning the whole funnel</h3>
+                <p className="ch-where">TheChoiceQuotes.com · Founder &amp; operator</p>
+                <p>
+                  To prove I could own a P&amp;L end to end, I built one. TheChoiceQuotes
+                  is a personal-finance comparison site I developed, write, rank and
+                  monetize myself — where I pioneered hosting platform offers
+                  directly on the site, leveraging Google search traffic instead of
+                  renting every click.
+                </p>
+                <p>
+                  That meant doing the unglamorous work: technical SEO, indexing
+                  and canonicalization debugging in Search Console, .htaccess URL
+                  rewriting, analytics wiring, and a nine-article credit-education
+                  hub aimed at a defined audience gap.
+                </p>
+                <div className="ch-proof">
+                  <span className="proof">Content → traffic → conversion loop</span>
+                  <span className="proof">Technical SEO</span>
+                  <span className="proof">Native &amp; affiliate monetization</span>
+                  <span className="proof">Google search traffic strategy</span>
+                </div>
+                <p className="ch-link"><a href="https://thechoicequotes.com" target="_blank" rel="noopener noreferrer">Visit thechoicequotes.com ↗</a></p>
+              </div>
+            </article>
+
+            <article className="chapter">
+              <div className="ch-num">04</div>
+              <div>
+                <h3>Building my own infrastructure</h3>
+                <p className="ch-where">Independent product work · Next.js · TypeScript · Supabase · Paystack</p>
+                <p>
+                  Somewhere along the way, &quot;I wish this tool existed&quot; turned into
+                  &quot;I&apos;ll build it.&quot; The most visible result is Celeray, a live
+                  community rewards platform with real Paystack payment integration,
+                  real-time multiplayer features, and AI-powered functionality — taken
+                  from idea to shipped product solo, including production payment
+                  debugging.
+                </p>
+                <p>
+                  This chapter is where my product management practice comes from:
+                  requirements, user flows, feature prioritization, payment and
+                  payout workflow design, and the discipline of shipping — not
+                  slideware, working software.
+                </p>
+                <div className="ch-proof">
+                  <span className="proof">Product: idea → live</span>
+                  <span className="proof">Payment integration (Paystack)</span>
+                  <span className="proof">Real-time systems</span>
+                  <span className="proof">AI feature integration</span>
+                  <span className="proof">PostgreSQL / Supabase</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="chapter">
+              <div className="ch-num">05</div>
+              <div>
+                <h3>Where the leadership was forged</h3>
+                <p className="ch-where">Adventist Youth Ministries · Multi-year leadership roles</p>
+                <p>
+                  Long before anyone paid me to lead, a large structured
+                  organization trusted me to. Through years of progressive
+                  leadership responsibility in Adventist Youth Ministries, I
+                  learned how organizations really operate: planning and executing
+                  programs for 170+ participants, managing multi-million-naira
+                  program budgets with full income-and-expense reporting to senior
+                  leadership, coordinating teams of volunteer facilitators, and
+                  designing training curricula delivered by a dozen presenters.
+                </p>
+                <p>
+                  It taught me the skills no course quite does: accountability with
+                  other people&apos;s money, calm logistics under pressure, and how to
+                  get a team of volunteers to deliver like professionals.
+                </p>
+                <div className="ch-proof">
+                  <span className="proof">Program planning &amp; execution</span>
+                  <span className="proof">Budget management &amp; reporting</span>
+                  <span className="proof">Team &amp; volunteer leadership</span>
+                  <span className="proof">Training design &amp; delivery</span>
+                  <span className="proof">Stakeholder communication</span>
+                </div>
+              </div>
+            </article>
           </div>
-
-          <article className="case">
-            <div className="case-top">
-              <div>
-                <h3>NetTrack — a full affiliate platform, built from scratch</h3>
-                <p className="role">Solo build · Turborepo · NestJS · Fastify · Next.js · PostgreSQL · ClickHouse · Redis · BullMQ</p>
-              </div>
-              <span className="chip ok">In development · ~65% of commercial parity</span>
-            </div>
-            <p>
-              To prove I understand attribution beyond the dashboard, I&apos;m building
-              the platform itself: a NestJS API, a dedicated Fastify tracking endpoint,
-              a ClickHouse event store for click and conversion data, and Next.js
-              portals for affiliates and advertisers — benchmarked feature-by-feature
-              against Everflow and CAKE.
-            </p>
-            <p>
-              Offer management, tracking links, postback handling, reporting, and
-              affiliate/advertiser modules are working. If your team debates subIDs,
-              server-side attribution, or payout logic, I&apos;ve implemented every one
-              of those concepts by hand.
-            </p>
-            <div className="case-meta">
-              <div className="kv"><div className="k">Why it matters</div><div className="v">I speak both marketer and engineer</div></div>
-              <div className="kv"><div className="k">Event pipeline</div><div className="v">Fastify → Redis/BullMQ → ClickHouse</div></div>
-              <div className="kv"><div className="k">Benchmark</div><div className="v">Everflow · CAKE feature sets</div></div>
-            </div>
-            <div className="case-links">
-              <a href="#contact"><span className="todo">[ADD demo video link]</span></a>
-              <a href="#contact"><span className="todo">[ADD architecture write-up link]</span></a>
-            </div>
-          </article>
-
-          <article className="case">
-            <div className="case-top">
-              <div>
-                <h3>Celeray — payments-integrated community rewards app</h3>
-                <p className="role">Solo build · Next.js 15 · TypeScript · Supabase · Paystack · Vercel · Claude API</p>
-              </div>
-              <span className="chip ok">Live product</span>
-            </div>
-            <p>
-              A birthday rewards platform for Nigerian communities with live Paystack
-              payment integration, real-time multiplayer games (server-authoritative
-              engine over Supabase Realtime — Trivia, WHOT, Chess, Ludo), and AI
-              features built on the Claude API with rate limiting and caching.
-            </p>
-            <p>
-              Shipped end to end: product design, contribution and payout workflows,
-              roles and permissions, a 12-issue mobile UX audit, and payment-bug
-              debugging in production.
-            </p>
-            <div className="case-meta">
-              <div className="kv"><div className="k">Payments</div><div className="v">Live Paystack integration</div></div>
-              <div className="kv"><div className="k">Realtime</div><div className="v">Server-authoritative multiplayer</div></div>
-              <div className="kv"><div className="k">AI</div><div className="v">Claude API · pgvector · caching</div></div>
-            </div>
-            <div className="case-links">
-              <a href="#contact"><span className="todo">[ADD live URL]</span></a>
-              <a href="#contact"><span className="todo">[ADD screenshots]</span></a>
-            </div>
-          </article>
-
-          <article className="case">
-            <div className="case-top">
-              <div>
-                <h3>TheChoiceQuotes — the full loop: content → traffic → conversion</h3>
-                <p className="role">Owner-operator · thechoicequotes.com · Native &amp; affiliate monetization</p>
-              </div>
-              <span className="chip ok">Live · monetized</span>
-            </div>
-            <p>
-              A personal-finance comparison site I built, write, rank, and monetize
-              myself. A 9-article credit-education hub targets a defined &quot;credit
-              access gap&quot; audience; traffic comes from SEO and Taboola native
-              campaigns; monetization runs through affiliate insurance and credit offers.
-            </p>
-            <p>
-              The unglamorous parts are the point: Apache/.htaccess URL rewriting,
-              canonicalization, Search Console indexing debugging, and analytics
-              wiring — the complete performance-marketing P&amp;L in miniature.
-            </p>
-            <div className="case-meta">
-              <div className="kv"><div className="k">Content</div><div className="v">9-article credit hub + insurance pillar</div></div>
-              <div className="kv"><div className="k">Traffic</div><div className="v">Technical SEO + Taboola native</div></div>
-              <div className="kv"><div className="k">Result</div><div className="v"><span className="todo">[ADD traffic/revenue metric]</span></div></div>
-            </div>
-            <div className="case-links">
-              <a href="https://thechoicequotes.com" target="_blank" rel="noopener noreferrer">Visit the site ↗</a>
-            </div>
-          </article>
         </div>
       </section>
 
-      <section id="skills">
+      <section id="capabilities">
         <div className="wrap">
-          <div className="sec-head">
-            <h2>Skills, honestly leveled</h2>
-            <span className="path">/parameters · self-assessed against real work</span>
-          </div>
-          <div className="skills-grid">
-            <div className="skill-card">
+          <p className="kicker">Capabilities</p>
+          <h2 className="sec-title">The full toolkit, grouped the way I actually use it.</h2>
+
+          <div className="cap-grid">
+            <div className="cap">
               <h3>Tracking &amp; Attribution</h3>
-              <ul>
-                <li>S2S tracking &amp; postback URLs <span className="lvl">advanced</span></li>
-                <li>RedTrack · Voluum · Skro <span className="lvl">advanced</span></li>
-                <li>Everflow · CAKE · Affise · TUNE <span className="lvl">advanced</span></li>
-                <li>Conversion debugging <span className="lvl">advanced</span></li>
-                <li>Google Analytics <span className="lvl">intermediate</span></li>
-              </ul>
+              <p className="cap-note">My deepest specialty — the layer most marketers never touch.</p>
+              <div className="tags">
+                <span className="tag">S2S tracking</span><span className="tag">Postback URLs</span>
+                <span className="tag">Direct linking</span><span className="tag">subID architecture</span>
+                <span className="tag">RedTrack</span><span className="tag">Voluum</span>
+                <span className="tag">Skro</span><span className="tag">Conversion debugging</span>
+                <span className="tag">Google Analytics</span>
+              </div>
             </div>
-            <div className="skill-card">
-              <h3>Paid Media</h3>
-              <ul>
-                <li>Taboola native advertising <span className="lvl">adv/int</span></li>
-                <li>Meta Ads (FB/IG) <span className="lvl">adv/int</span></li>
-                <li>CPA / CPL / EPC economics <span className="lvl">advanced</span></li>
-                <li>Landing pages &amp; CRO <span className="lvl">intermediate</span></li>
-                <li>Creative &amp; audience testing <span className="lvl">intermediate</span></li>
-              </ul>
+            <div className="cap">
+              <h3>Affiliate Network Operations</h3>
+              <p className="cap-note">Hands-on across the platforms that run the industry.</p>
+              <div className="tags">
+                <span className="tag">CAKE</span><span className="tag">Impact</span>
+                <span className="tag">Affise</span><span className="tag">Everflow</span>
+                <span className="tag">TUNE</span><span className="tag">FlexOffers</span>
+                <span className="tag">Offer management</span><span className="tag">Partner recruitment</span>
+                <span className="tag">Technical integrations</span>
+              </div>
             </div>
-            <div className="skill-card">
-              <h3>Commercial</h3>
-              <ul>
-                <li>Affiliate partner management <span className="lvl">advanced</span></li>
-                <li>Deal negotiation (CPA/RevShare) <span className="lvl">intermediate</span></li>
-                <li>Salesforce CRM <span className="lvl">intermediate</span></li>
-                <li>Vendor/account management <span className="lvl">intermediate</span></li>
-                <li>Excel reporting <span className="lvl">advanced</span></li>
-              </ul>
+            <div className="cap">
+              <h3>Paid Media &amp; Growth</h3>
+              <p className="cap-note">Where the profit gets made.</p>
+              <div className="tags">
+                <span className="tag">Taboola</span><span className="tag">Meta Ads</span>
+                <span className="tag">Native advertising</span><span className="tag">CPA / CPL / EPC economics</span>
+                <span className="tag">Creative &amp; audience testing</span><span className="tag">Landing-page CRO</span>
+                <span className="tag">Traffic-quality analysis</span>
+              </div>
             </div>
-            <div className="skill-card">
-              <h3>Engineering</h3>
-              <ul>
-                <li>Next.js · TypeScript · React <span className="lvl">intermediate</span></li>
-                <li>PostgreSQL · Supabase <span className="lvl">intermediate</span></li>
-                <li>NestJS · Fastify · Redis <span className="lvl">intermediate</span></li>
-                <li>Payment integration (Paystack) <span className="lvl">intermediate</span></li>
-                <li>Technical SEO <span className="lvl">intermediate</span></li>
-              </ul>
+            <div className="cap">
+              <h3>Commercial &amp; Relationship</h3>
+              <p className="cap-note">Business development with real deal structures behind it.</p>
+              <div className="tags">
+                <span className="tag">Deal negotiation (CPA/RevShare/Hybrid)</span>
+                <span className="tag">Advertiser &amp; publisher management</span>
+                <span className="tag">Vendor management</span><span className="tag">Salesforce CRM</span>
+                <span className="tag">Advanced Excel</span><span className="tag">Commercial reporting</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience">
-        <div className="wrap">
-          <div className="sec-head">
-            <h2>Experience</h2>
-            <span className="path">/timeline · 2022 → present</span>
-          </div>
-          <div className="xp">
-            <div className="xp-item">
-              <h3>Business Development Manager</h3>
-              <p className="where">Digital Concept (Concept Digital Affiliate Network) · Lagos · Jul 2023 — present</p>
-              <ul>
-                <li>Run paid acquisition across Meta Ads and Taboola for CPA/CPL offers, including a US-targeted insurance vertical — <span className="todo">[ADD monthly spend + CPL result]</span></li>
-                <li>Build and maintain S2S tracking, postbacks, and direct-linking across RedTrack, Voluum and Skro for accurate attribution</li>
-                <li>Onboard and support international affiliate partners and their technical integrations — <span className="todo">[ADD partner count]</span></li>
-                <li>Build landing pages (HTML/CSS/JS) and iterate funnels against traffic-quality data</li>
-              </ul>
+            <div className="cap">
+              <h3>Engineering &amp; Web</h3>
+              <p className="cap-note">Enough to ship — and to speak fluently with any dev team.</p>
+              <div className="tags">
+                <span className="tag">Next.js</span><span className="tag">TypeScript</span>
+                <span className="tag">React</span><span className="tag">PostgreSQL / Supabase</span>
+                <span className="tag">Paystack integration</span><span className="tag">HTML / CSS / JS</span>
+                <span className="tag">Technical SEO</span><span className="tag">API integration</span>
+              </div>
             </div>
-            <div className="xp-item">
-              <h3>Vendor Experience Agent (Account Manager)</h3>
-              <p className="where">Jumia · Lagos · May 2022 — Jun 2023</p>
-              <ul>
-                <li>Managed vendor accounts on Africa&apos;s largest e-commerce platform — payments, listings, fulfillment — <span className="todo">[ADD vendor count]</span></li>
-                <li>Tracked cases in Salesforce and cut response times — <span className="todo">[ADD % if known]</span></li>
-                <li>Produced Excel performance reports supporting management decisions</li>
-              </ul>
-            </div>
-            <div className="xp-item">
-              <h3>B.Eng. Electronics Engineering</h3>
-              <p className="where">Michael Okpara University of Agriculture, Umuahia · Dec 2022</p>
-              <ul>
-                <li>AWS Cloud Practitioner coursework (CLF-C02), 2025</li>
-              </ul>
+            <div className="cap">
+              <h3>Program &amp; Project Leadership</h3>
+              <p className="cap-note">Planning, budgets, people — proven outside the job title.</p>
+              <div className="tags">
+                <span className="tag">Program management</span><span className="tag">Budgeting &amp; reconciliation</span>
+                <span className="tag">Logistics &amp; scheduling</span><span className="tag">Team leadership</span>
+                <span className="tag">Training &amp; facilitation</span><span className="tag">Formal reporting</span>
+                <span className="tag">Public speaking</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="leadership">
+      <section id="how">
         <div className="wrap">
-          <div className="sec-head">
-            <h2>Leadership, with real budgets</h2>
-            <span className="path">/volunteer-programs · Adventist Youth Ministries, Lagos Mainland Conference</span>
+          <p className="kicker">How I work</p>
+          <h2 className="sec-title">What you actually get when you hire me.</h2>
+          <div className="hw-grid">
+            <div className="hw">
+              <h3>Systems thinking</h3>
+              <p>I trace problems across the whole chain — click, tracker, network, advertiser — instead of guessing at one link. It&apos;s why broken attribution gets fixed instead of argued about.</p>
+            </div>
+            <div className="hw">
+              <h3>Ownership by default</h3>
+              <p>Everything on this page — the campaigns, the site, the products — I took from zero to done. Hand me an outcome, not a task list.</p>
+            </div>
+            <div className="hw">
+              <h3>Numbers you can trust</h3>
+              <p>I&apos;ve managed other people&apos;s money with full income-and-expense reporting, and flagged variances instead of hiding them. My reporting holds up under scrutiny.</p>
+            </div>
+            <div className="hw">
+              <h3>Fast, evidenced learning</h3>
+              <p>Engineering degree to self-taught full-stack builder to certified-track cloud coursework — I close skill gaps quickly and show the work, not just the certificate.</p>
+            </div>
+            <div className="hw">
+              <h3>Both languages, fluently</h3>
+              <p>I can negotiate a RevShare deal in the morning and debug the postback behind it after lunch. Marketers trust my numbers; engineers trust my tickets.</p>
+            </div>
+            <div className="hw">
+              <h3>Clear communication</h3>
+              <p>Reports, documentation, training rooms, and stakeholder updates — years of writing and presenting mean nothing I run stays a black box.</p>
+            </div>
           </div>
-          <div className="lead-grid">
-            <div className="lead-card">
-              <div className="num">₦1.48M</div>
-              <div className="what">Funds received &amp; reconciled</div>
-              <p>Directed finances for a five-day residential youth bootcamp — full income/expense reporting delivered to conference leadership, variances flagged transparently.</p>
+        </div>
+      </section>
+
+      <section id="about">
+        <div className="wrap">
+          <p className="kicker">About</p>
+          <h2 className="sec-title">Lagos-based. Globally fluent in performance.</h2>
+          <div className="about-grid">
+            <div>
+              <p>
+                I&apos;m Samuel Richard — a performance marketing and business
+                development professional with an engineer&apos;s instinct for how
+                things work under the hood. Four years across e-commerce
+                operations and affiliate networks taught me the commercial side;
+                my own projects taught me to build.
+              </p>
+              <p>
+                I&apos;m equally comfortable presenting to a partner, rebuilding a
+                landing page, or reading a postback log — and I&apos;m looking for a
+                team where that range compounds: affiliate management, performance
+                marketing, ad-tech solutions, or technical account management.
+              </p>
             </div>
-            <div className="lead-card">
-              <div className="num">176</div>
-              <div className="what">Participants registered</div>
-              <p>Drills &amp; Drums 2026 bootcamp: logistics, feeding, facilitators, security and daily programming across five days.</p>
-            </div>
-            <div className="lead-card">
-              <div className="num">43 × 12</div>
-              <div className="what">Lessons × presenters scheduled</div>
-              <p>Designed and scheduled a leadership-training curriculum, allocating 43 lessons across 12 facilitators.</p>
-            </div>
-            <div className="lead-card">
-              <div className="num">131</div>
-              <div className="what">Children in district camp program</div>
-              <p>Planning and documentation for a district-level camp — registration, safeguarding-minded logistics, and reporting.</p>
-            </div>
+            <ul className="edu">
+              <li><span>B.Eng., Electronics Engineering — Michael Okpara University of Agriculture</span><span>2022</span></li>
+              <li><span>AWS Cloud Practitioner coursework (CLF-C02)</span><span>2025</span></li>
+              <li><span>Business Development Manager — Digital Concept</span><span>2023 — now</span></li>
+              <li><span>Vendor Experience Agent — Jumia</span><span>2022 — 23</span></li>
+            </ul>
           </div>
         </div>
       </section>
 
       <footer id="contact">
         <div className="wrap">
-          <h2>Hiring for affiliate, performance, or ad-tech roles? Let&apos;s talk.</h2>
+          <h2>Let&apos;s make your next quarter <em>measurably</em> better.</h2>
           <div className="foot-links">
-            <a className="btn primary" href="mailto:samuelrichards1844@gmail.com">samuelrichards1844@gmail.com</a>
-            <a
-              className="btn ghost"
-              href="https://linkedin.com/in/samuel-richard-257418220"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn ↗
-            </a>
+            <a className="btn dark" href="mailto:samuelrichards1844@gmail.com">samuelrichards1844@gmail.com</a>
+            <a className="btn light" href="https://linkedin.com/in/samuel-richard-257418220" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           </div>
           <p className="foot-note">
-            Designed and built by Samuel Richard with Next.js — deployed on Vercel.
-            View source on <span className="todo">[ADD GitHub repo link]</span>.
+            Designed and built by Samuel Richard with Next.js ·{" "}
+            <a href="https://github.com/Richards28910/portfolio" target="_blank" rel="noopener noreferrer">view source on GitHub</a>
           </p>
         </div>
       </footer>

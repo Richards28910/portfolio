@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title:
-    "Samuel Richard — Affiliate & Performance Marketing, Tracking Infrastructure",
+  title: "Samuel Richard — Performance Marketing, Affiliate Operations & Tracking Infrastructure",
   description:
-    "Performance marketer who runs the campaigns and builds the pipes: Meta & Taboola buying, S2S tracking, postbacks, RedTrack/Voluum, and a self-built affiliate platform.",
+    "Lagos-based performance marketing and business development professional. Scaled CPA/CPL offers on Taboola and Meta to $100k+ profit in six months, runs full S2S tracking stacks, and ships his own software.",
   metadataBase: new URL("https://samuelrichard.vercel.app"),
   openGraph: {
-    title: "Samuel Richard — I run the campaigns and build the pipes.",
+    title: "Samuel Richard — I turn paid traffic into profit, and build the systems that prove it.",
     description:
-      "Affiliate & performance marketing specialist with hands-on tracking infrastructure: S2S postbacks, RedTrack, Voluum, Everflow — and a full affiliate platform built from scratch.",
+      "Performance marketing · Affiliate operations · Tracking infrastructure · Business development",
     type: "website",
   },
 };
@@ -22,13 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Spline+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
       </head>
